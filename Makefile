@@ -7,6 +7,12 @@ build:
 run:
 	go run .
 
+clean:
+	go clean -testcache
+
+test: clean
+	go test ./...
+
 commit:
 	gofmt -w .
 	git add .
