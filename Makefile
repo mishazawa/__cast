@@ -11,9 +11,9 @@ clean:
 	go clean -testcache
 
 test: clean
-	go test ./...
+	go test -v ./...
 
 commit:
-	gofmt -w .
+	gofmt -w ./...
 	git add .
 	git commit --allow-empty
